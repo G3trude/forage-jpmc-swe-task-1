@@ -19,6 +19,19 @@ class ClientTest(unittest.TestCase):
 
   """ ------------ Add more unit tests ------------ """
 
+def test_getDataPoint_calculatePriceZeroDenominator(self):
+    quotes = [
+      {'top_ask': {'price': 121.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+      {'top_ask': {'price': 0, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 0, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+    ]
+    """ ------------ Add the assertion below ------------ """
+
+def test_getDataPoint_calculatePriceNonNumericInput(self):
+    quotes = [
+      {'top_ask': {'price': fivesix, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': &, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+      {'top_ask': {'price': twenthou, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': yunth, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+    ]
+    """ ------------ Add the assertion below ------------ """
 
 
 if __name__ == '__main__':
